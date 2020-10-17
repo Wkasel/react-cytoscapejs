@@ -31,8 +31,8 @@
     "demo": "cross-env NODE_ENV=development webpack-serve webpack.config.js --open --open-path demo.html"
   },
   "peerDependencies": {
-    "react": ">=15.0.0",
-    "react-dom": ">=15.0.0"
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -53,7 +53,7 @@
     "mocha-chrome": "^1.1.0",
     "npm-run-all": "^4.1.1",
     "prettier": "^1.13.7",
-    "react": "^16.4.1",
+    "react": "^16.13.1",
     "react-docgen": "^2.21.0",
     "react-dom": "^16.13.1",
     "rimraf": "^2.6.2",
@@ -66,7 +66,7 @@
     "node": ">=8.11.3"
   },
   "dependencies": {
-    "cytoscape": "^3.2.19",
+    "cytoscape": "^3.16.2",
     "prop-types": "^15.6.2"
   }
 }
