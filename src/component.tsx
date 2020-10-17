@@ -36,7 +36,8 @@ interface ICytoscapeComponentProps {
   motionBlur?: any,
   motionBlurOpacity?: any,
   wheelSensitivity?: any,
-  pixelRatio?: any | any
+  pixelRatio?: any,
+  normalizedElements?: any
 }
 
 
@@ -48,8 +49,8 @@ interface ICytoscapeComponentProps {
  * and modification of a Cytoscape instance, a graph visualisation.
  */
 export const CytoscapeComponent: React.FC<ICytoscapeComponentProps> = props => {
-  const $cy = useRef(null);
-  const $container = useRef(null);
+  const $cy = useRef<Cytoscape>(null);
+  const $container = useRef<HTMLDivElement>(null);
   const updateCytoscape = (prevProps, newProps) => {
     const { diff, toJson, get, forEach } = newProps;
     patch($cy.current, prevProps, newProps, diff, toJson, get, forEach);
@@ -92,8 +93,8 @@ export const CytoscapeComponent: React.FC<ICytoscapeComponentProps> = props => {
   return <div ref={$container} style={{ width: "100vw", height: "100vh" }} />;
 };
 CytoscapeComponent.displayName = `CytoscapeComponent`;
-CytoscapeComponent.defaultProps = () => defaults;
-CytoscapeComponent.normalizedElements = elements => {
+
+export const normalizedElements = elements => {
   const isArray = elements.length != null;
   if (isArray) {
     return elements;
