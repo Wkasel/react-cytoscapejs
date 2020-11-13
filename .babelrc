@@ -1,7 +1,10 @@
 {
   "presets": [
-    "env",
-    "react"
+    "@babel/env",
+    "@babel/typescript"
   ],
-  "ignore": "node_modules/**/*"
+  "plugins": [
+    "@babel/proposal-class-properties",
+    "@babel/proposal-object-rest-spread"
+  ]
 }
