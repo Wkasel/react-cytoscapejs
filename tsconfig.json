@@ -2,7 +2,7 @@
   "extends": "./tsconfig.base.json",
   "include": [
     "src/**/*.ts",
-    "src/**/*.tsx"
+    "src/**/*.tsx", "src/types.js", "src/component.jsx"
   ],
   "exclude": [
     "example",

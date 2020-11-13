@@ -1,1 +1,5 @@
 node_modules/**/*
+*.stories.tsx
+*.spec.tsx
+node_modules
+example

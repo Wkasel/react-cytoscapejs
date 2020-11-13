@@ -1,8 +1,11 @@
 const typeofObj = typeof {};
+
 const eitherIsNil = (a, b) => a == null || b == null;
+
 export const hashDiff = (a, b) => {
   return eitherIsNil(a, b) || a.hash() !== b.hash();
 };
+
 export const shallowObjDiff = (a, b) => {
   if (eitherIsNil(a, b) && !(a == null && b == null)) {
     return true;
